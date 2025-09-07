@@ -1,19 +1,19 @@
 Storage = []
 
-def add_friends():
-    user_input = input("Enter a friends name!:").strip().title()
+def add_friend():
+    user_input = input("Enter a friend's name!:").strip().title()
     if user_input:
         Storage.append(user_input)
         print(F"Your friend {user_input} has been added to the list!")
     
 
 def remove_friend():
-    user_input = input("Enter a name you would like to remove.:").strip().title()
+    user_input = input("Enter a freind's name you would like to remove.:.").strip().title()
     if user_input in Storage:
         Storage.remove(user_input)
         print(F"Your friend {user_input} has been removed from the list.")
     else:
-        print("Couldn't find the user",user_input)
+        print(F"Couldn't find the user {user_input}")
 
 
 def view_list():
@@ -25,7 +25,7 @@ def wipe_whole_list():
     user_input = input("Enter Y to wipe the list and N to not:").upper().strip()
     if user_input.upper() == "Y":
         Storage.clear()
-        print("List Successfully deleted.")
+        print("List successfully deleted.")
     else: 
         print("List has been spared.")
 
@@ -42,7 +42,7 @@ while True:
 
                 match user_input:
                     case 1:
-                        add_friends()
+                        add_friend()
                     case 2:
                         remove_friend()
                     case 3:
